@@ -7,47 +7,44 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1 class="example">
-      dawdwa
-    </h1>
-    <div>
-    <ul id="list">
-      <li class="list" onclick="liSelect(1)">ehehhehe</li>
-      <li class="list" onclick="liSelect(2)">hehehe</li>
-      <li class="list" onclick="liSelect(3)">diraaa</li>
-      <li class="list" onclick="liSelect(4)"> </li>
-      <li class="list" onclick="liSelect(5)"> </li>
-      <li class="list" onclick="liSelect(6)"> </li>
-      <li class="list" onclick="liSelect(7)"> </li>
-      <li class="list" onclick="liSelect(8)"> </li>
-      <li class="list" onclick="liSelect(9)"> </li>
-      <li class="list" onclick="liSelect(10)"> </li>
-      <li class="list" onclick="liSelect(11)"> </li>
-      <li class="list" onclick="liSelect(12)"> </li>
-      <li class="list" onclick="liSelect(13)"> </li>
-      <li class="list" onclick="liSelect(14)"> </li>
-      <li class="list" onclick="liSelect(15)"> </li>
-      <li class="list" onclick="liSelect(16)"> </li>
-      <li class="list" onclick="liSelect(17)"> </li>
-      <li class="list" onclick="liSelect(18)"> </li>
-      <li class="list" onclick="liSelect(19)"> </li>
-      <li class="list" onclick="liSelect(20)"> </li>
-      <li class="list" onclick="liSelect(21)"> </li>
-      <li class="list" onclick="liSelect(22)"> </li>
-      <li class="list" onclick="liSelect(23)"> </li>
-      <li class="list" onclick="liSelect(24)"> </li>
-      <li class="list" onclick="liSelect(25)"> </li>
-      <li class="list" onclick="liSelect(26)"> </li>
-      <li class="list" onclick="liSelect(27)"> </li>
+    <div class="listee">
+    <ul>
+      <li onclick="liSelect(1)">ehehhehe</li>
+      <li onclick="liSelect(2)">hehehe</li>
+      <li onclick="liSelect(3)">diraaa</li>
+      <li onclick="liSelect(4)"> </li>
+      <li onclick="liSelect(5)"> </li>
+      <li onclick="liSelect(6)"> </li>
+      <li onclick="liSelect(7)"> </li>
+      <li onclick="liSelect(8)"> </li>
+      <li onclick="liSelect(9)"> </li>
+      <li onclick="liSelect(10)"> </li>
+      <li onclick="liSelect(11)"> </li>
+      <li onclick="liSelect(12)"> </li>
+      <li onclick="liSelect(13)"> </li>
+      <li onclick="liSelect(14)"> </li>
+      <li onclick="liSelect(15)"> </li>
+      <li onclick="liSelect(16)"> </li>
+      <li onclick="liSelect(17)"> </li>
+      <li onclick="liSelect(18)"> </li>
+      <li onclick="liSelect(19)"> </li>
+      <li onclick="liSelect(20)"> </li>
+      <li onclick="liSelect(21)"> </li>
+      <li onclick="liSelect(22)"> </li>
+      <li onclick="liSelect(23)"> </li>
+      <li onclick="liSelect(24)"> </li>
+      <li onclick="liSelect(25)"> </li>
+      <li onclick="liSelect(26)"> </li>
+      <li onclick="liSelect(27)"> </li>
     </ul>
-    <div class="counter">
+    <div id="divCounter">
       <p id="pCount">
         0
       </p>
-      <button type="button" id="btPlus" onclick="count++; document.getElementById('pCount').innerHTML = count;">
+      <button type="button" id="btnPlus" onclick="count++; document.getElementById('pCount').innerHTML = count;">
         +
       </button>
-      <button type="button" id="btMin" onclick="count--; document.getElementById('pCount').innerHTML = count;">
+      <button type="button" id="btnMin" onclick="count--; document.getElementById('pCount').innerHTML = count;">
         -
       </button>
     </div>
@@ -55,10 +52,8 @@
       let count = 0
 
       function liSelect(n) {
-        const example = document.getElementsByClassName('list')[n - 1];
+        const example = document.getElementsByTagName('li')[n - 1];
         example.setAttribute('style', 'text-decoration: line-through');
-        //document.('li:nth-child()').style.color = 'blue;
-        console.log(n);
       }
     </script>
   </body>
