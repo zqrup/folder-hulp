@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <title>
-
+      Folder hulp
     </title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="listee">
+    <div>
     <ul>
       <li onclick="liSelect(1)">ehehhehe</li>
       <li onclick="liSelect(2)">hehehe</li>
@@ -37,6 +37,7 @@
       <li onclick="liSelect(26)"> </li>
       <li onclick="liSelect(27)"> </li>
     </ul>
+    </div>
     <div id="divCounter">
       <p id="pCount">
         0
@@ -49,11 +50,18 @@
       </button>
     </div>
     <script>
-      let count = 0
+      let count = 0;
+
+      let selected = false;
 
       function liSelect(n) {
-        const example = document.getElementsByTagName('li')[n - 1];
-        example.setAttribute('style', 'text-decoration: line-through');
+        if(selected === false) {
+          document.getElementsByTagName('li')[n - 1].setAttribute('style', 'text-decoration: line-through');
+          selected = true;
+        } else {
+          document.getElementsByTagName('li')[n - 1].removeAttribute('style');
+          selected = false;
+        }
       }
     </script>
   </body>
